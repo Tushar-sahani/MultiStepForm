@@ -12,16 +12,6 @@ import { faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 const Form = () => {
   const forms = [<ExperiencePage/>,<InterestPage/>,<SkillPage/>,<MathPage/>,<RatingPage/>]
   const [page ,setPage] = useState(0);
-  const [progressWidth, setProgressWidth] = useState('w-1/5');
-
-  useEffect(() => {
-    setProgressWidth(() => {
-      if (page === 1) return 'w-2/5';
-      if (page === 2) return 'w-3/5';
-      if (page === 3) return 'w-4/5';
-      return 'w-full';
-    });
-  }, [page]);
   
   const handlePages = () => {
     setPage((page)=>page + 1);
@@ -32,11 +22,6 @@ const Form = () => {
     setPage((page)=>page - 1);
     console.log(page);
   };
-
-  const calculateProgressWidth = () => {
-    const progress = ((page + 1) / forms.length) * 100; // Calculate progress percentage
-    return `w-${progress}/5`; // Convert progress to Tailwind CSS width format
-  };
   
   return (
     <div className="w-full mt-16">
@@ -46,8 +31,8 @@ const Form = () => {
             className={`text-xl absolute -left-1 top-3 cursor-pointer ${page === 0 ? "hidden" : "visible"}`}
             onClick={handlePagesBack}
           />
-        <div className="m-auto w-full bg-black relative">
-          <div className={`${progressWidth}  h-1 bg-green-600`}></div>
+        <div className="m-auto w-full">
+          <div className={`${page === 0 ? 'w-1/5' : page === 1 ? 'w-2/5' : page === 2 ? 'w-3/5' :page === 3 ? 'w-4/5' : 'w-full'} h-1 bg-green-600`}></div>
         </div>
       </div>
       <div className="flex align-middle justify-center flex-col">
