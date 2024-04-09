@@ -4,11 +4,11 @@ import cheerleader from "../assets/cheerleader-blorb.mp4";
 const RatingPage = () => {
   return (
     <div
-      className={` p-24 m-auto flex w-3/4`}
+      className='p-24 m-auto flex w-3/4 transition animate-fade'
     >
       <video
         loop
-        autoPlay=""
+        autoPlay
         muted
         src={cheerleader}
         type="video/mp4"
@@ -27,6 +27,7 @@ const RatingPage = () => {
         </p>
         <p className="italic mt-5">- Jacob S. </p>
       </div>
+      
     </div>
   );
 };
