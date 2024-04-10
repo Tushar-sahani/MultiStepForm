@@ -23,7 +23,7 @@ const InterestPage = () => {
           experience).
         </p>
       </div>
-      <div>
+      <div className="max-md:m-3">
         <div className={`mt-2 flex h-14 border-[1.5px] border-s text-lg border-gray-200 p-2  pl-4 cursor-pointer rounded-lg transition hover:ease-in-out hover:duration-300 hover:scale-105 ${select==='Learning'?'border-yellow-600 shadow-lg ':''}`} onClick={()=>handleSelect('Learning')}>
           <img src={chart} alt="professional" className="w-7 h-7 mt-1" />
           <p className=" pl-4 text-sm pt-2">

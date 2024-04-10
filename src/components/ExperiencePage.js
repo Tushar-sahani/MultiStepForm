@@ -19,7 +19,7 @@ const ExperiencePage = () => {
         <h1 className="text-4xl font-semibold">Which describes your best?</h1>
         <p className="p-3">This will help us personalize your experience.</p>
       </div>
-      <div>
+      <div className="max-md:m-3">
         <div className={`mt-1 flex h-14 border-[1.5px] border-s text-lg border-gray-200 p-2  pl-4 cursor-pointer rounded-lg transition hover:ease-in-out hover:duration-300 hover:scale-105 ${select==='Student'?'border-yellow-600 shadow-lg ':''}`} onClick={()=>handleSelect('Student')}>
           <img src={student} alt="student" />
           <p className=" pl-4 text-sm pt-3">

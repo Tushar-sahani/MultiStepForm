@@ -4,7 +4,7 @@ import cheerleader from "../assets/cheerleader-blorb.mp4";
 const RatingPage = () => {
   return (
     <div
-      className='p-24 m-auto flex w-3/4 transition animate-fade'
+      className='lg:p-24 m-auto flex w-3/4 transition animate-fade max-md:flex-col md:align-middle max-md:mt-8 max-md:mb-8'
     >
       <video
         loop
@@ -12,9 +12,9 @@ const RatingPage = () => {
         muted
         src={cheerleader}
         type="video/mp4"
-        className="w-72 ml-16"
+        className="w-72 lg:ml-16"
       />
-      <div className="pt-12 col-start-3 ml-28">
+      <div className="pt-12 col-start-3 lg:ml-28">
         <h1 className="text-3xl font-semibold">You're on your way!</h1>
         <p className="pt-7 text-4xl text-yellow-500">
           &#9733;&#9733;&#9733;&#9733;&#9733;
