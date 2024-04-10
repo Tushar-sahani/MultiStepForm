@@ -12,10 +12,10 @@ const RatingPage = () => {
         muted
         src={cheerleader}
         type="video/mp4"
-        className="w-72 lg:ml-16"
+        className="w-72 max-md:w-48 lg:ml-16 max-md:m-auto"
       />
       <div className="pt-12 col-start-3 lg:ml-28">
-        <h1 className="text-3xl font-semibold">You're on your way!</h1>
+        <h1 className="lg:text-3xl text-2xl font-semibold">You're on your way!</h1>
         <p className="pt-7 text-4xl text-yellow-500">
           &#9733;&#9733;&#9733;&#9733;&#9733;
         </p>
